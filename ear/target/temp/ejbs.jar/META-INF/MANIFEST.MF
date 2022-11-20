@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Created-By: Maven EJB Plugin 3.1.0
+Build-Jdk-Spec: 19
+Class-Path: lib/jpa.jar lib/jakarta.xml.bind-api.jar lib/jakarta.activat
+ ion-api.jar lib/jaxb-impl.jar lib/jaxb-core.jar lib/angus-activation.ja
+ r lib/hibernate-core.jar lib/jakarta.persistence-api.jar lib/jakarta.tr
+ ansaction-api.jar lib/jboss-logging.jar lib/hibernate-commons-annotatio
+ ns.jar lib/jandex.jar lib/classmate.jar lib/byte-buddy.jar lib/jaxb-run
+ time.jar lib/jakarta.activation.jar lib/txw2.jar lib/istack-commons-run
+ time.jar lib/jakarta.inject-api.jar lib/antlr4-runtime.jar
+

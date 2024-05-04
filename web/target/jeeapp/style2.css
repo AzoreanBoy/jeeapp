@@ -1,244 +1,226 @@
 * {
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  list-style: none;
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
 }
 
 /* --------- BODY --------- */
 body {
-  color: #1d1d1d;
-  font-weight: 300;
+	color: #1d1d1d;
+	font-weight: 300;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-b {
-  color: rgb(62, 105, 69);
-  font-family: "Helvetica";
+h1, h2, h3, h4, h5, b {
+	color: rgb(62, 105, 69);
+	font-family: "Helvetica";
 }
 
 /* --------- MAIN --------- */
 main {
-  min-height: 85vh;
+	min-height: 85vh;
 }
-
 
 /* --------- HEADER --------- */
 header {
-  text-align: center;
-  background: rgb(0, 128, 64);
-  color: white;
-  font-size: 15px;
-  margin-bottom: 2rem;
-  padding: 2rem 0;
+	text-align: center;
+	background: rgb(0, 128, 64);
+	color: white;
+	font-size: 15px;
+	margin-bottom: 2rem;
+	padding: 2rem 0;
 }
 
-
 header h1 {
-  padding: 1rem;
-  padding-bottom: 1rem;
-  font-weight: 700;
-  color: white;
+	padding: 1rem;
+	padding-bottom: 1rem;
+	font-weight: 700;
+	color: white;
 }
 
 img {
-  border-radius: 15px;
+	border-radius: 15px;
 }
 
-
-
 /* --------- TOP N --------- */
-
 section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  justify-items: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+	justify-items: center;
 }
 
 .menu {
-  padding: 1rem;
-  color: rgb(62, 105, 69);
+	padding: 1rem;
+	color: black;
 }
 
 .menu a {
-  border: 3px solid rgb(62, 105, 69);
-  border-radius: 15px;
-  padding: 1rem;
-
+	border: 3px solid rgb(62, 105, 69);
+	border-radius: 15px;
+	padding: 1rem;
 }
 
 .menu a:hover {
-  background-color: rgba(62, 105, 69, 0.7);
+	background-color: rgba(62, 105, 69, 0.7);
 }
 
 .mainMenu {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin: 0rem 25%;
-
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin: 0rem 25%;
 }
 
 .mainMenu a {
-  margin: 2rem;
-  border: 3px solid rgba(62, 105, 69, 0.7);
-  border-radius: 15px;
-  padding: 1rem;
+	margin: 2rem;
+	border: 3px solid rgba(62, 105, 69, 0.7);
+	border-radius: 15px;
+	padding: 1rem;
 }
 
 .mainMenu form select option {
-  text-align: center;
-  padding: 0.5rem;
+	text-align: center;
+	padding: 0.5rem;
 }
 
 .mainMenu form input {
-  padding: 0.5rem;
-  text-align: center;
-  margin: 0.5rem;
+	padding: 0.5rem;
+	text-align: center;
+	margin: 0.5rem;
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .pagetitle {
-  text-align: center;
-  padding: 1rem;
-  margin: 2rem;
-  margin-bottom: 3rem;
-
+	text-align: center;
+	padding: 1rem;
+	margin: 2rem;
+	margin-bottom: 3rem;
 }
 
 .actor {
-  padding: 1rem;
-  text-align: center;
-  border: 3px solid rgb(62, 105, 69);
-  border-radius: 0.85rem;
-  width: 75%;
+	padding: 1rem;
+	text-align: center;
+	border: 3px solid rgb(62, 105, 69);
+	border-radius: 0.85rem;
+	width: 75%;
 }
 
 .time {
-  font-style: italic;
+	font-style: italic;
 }
 
 .seriesByGenre {
-  margin: 2rem;
-  border: 3px solid rgba(62, 105, 69, 0.7);
-  border-radius: 15px;
-  padding: 1rem;
+	margin: 2rem;
+	border: 3px solid rgba(62, 105, 69, 0.7);
+	border-radius: 15px;
+	padding: 1rem;
 }
 
-
-
 .series {
-  padding: 2rem;
+	padding: 2rem;
 }
 
 .serie {
-  display: flex;
-  gap: 1rem;
-
+	display: flex;
+	gap: 1rem;
 }
 
 .serie img {
-  width: 15rem;
-  height: auto;
-  object-fit: cover;
-  margin: 0;
+	width: 15rem;
+	height: auto;
+	object-fit: cover;
+	margin: 0;
 }
 
 .serie-info {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 50%;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	width: 50%;
 }
 
 .serie-info h2 {
-  font-size: 2rem;
+	font-size: 2rem;
 }
 
 .serie-stats {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 1rem;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 1rem;
 }
 
 .serie-info h4 {
-  font-size: 1.25rem;
+	font-size: 1.25rem;
 }
 
-.stats,
-.cast {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+.stats, .cast {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
 }
 
 .cast h4 {
-  font-size: 1.25rem;
+	font-size: 1.25rem;
 }
 
 article h3 {
-  margin: 3rem 0 1rem;
-  font-size: 1.5rem;
+	margin: 3rem 0 1rem;
+	font-size: 1.5rem;
 }
 
 .episodes {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-top: 1rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+	margin-top: 1rem;
 }
 
 .ep {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 1rem;
-  border: 1px solid rgb(0, 128, 64);
-  border-radius: 0.25rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	padding: 1rem;
+	border: 1px solid rgb(0, 128, 64);
+	border-radius: 0.25rem;
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .goForIt {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  padding: 1rem;
-  border-radius: 12px;
-  border-color: darkgoldenrod;
-
+	display: flex;
+	text-align: center;
+	align-items: center;
+	padding: 1rem;
+	border-radius: 12px;
+	border-color: darkgoldenrod;
 }
 
 /* --------- FOOTER --------- */
 footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 12vh;
-  margin-top: 2rem;
-  background-color: rgb(0, 128, 64);
-  color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 12vh;
+	margin-top: 2rem;
+	background-color: rgb(0, 128, 64);
+	color: white;
 }
 
 footer p {
-  margin-bottom: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 
 footer p:last-child {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }

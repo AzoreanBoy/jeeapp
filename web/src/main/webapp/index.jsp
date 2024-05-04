@@ -1,5 +1,4 @@
 <html>
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -18,13 +17,7 @@
       <p>Master's in Biomedical Engineering</p>
     </header>
 
-    <div class="menu">
-      <span>
-        <a href="http://localhost:8080/web/"><strong>Home</strong></a>
-        <a href="http://localhost:8080/web/series"><strong>Series</strong></a>
-        <a href="http://localhost:8080/web/actors"><strong>Actors</strong></a>
-      </span>
-    </div>
+
 
     <div>
       <div>
@@ -37,18 +30,21 @@
           <a href="http://localhost:8080/web/series"><h4>Series Catalog</h4></a>
           <a href="http://localhost:8080/web/actors"><h4>Actors in DB</h4></a>
           <span class="seriesByGenre">
-          <form>
+          <form action="main" method="get">
             <h4>List of Series By Genre</h4>
             <br>
             <label for="Genres">Choose a genre:</label>
-            <select name="genres" id="cars">
+            <select name="genres" id="g">
               <option value="drama">Drama</option>
               <option value="adventure">Adventure</option>
               <option value="action">Action</option>
               <option value="horror">Horror</option>
+              <option value="Fantasy">Fantasy</option>
+              <option value="History">History</option>
+              <option value="Biography">Biography</option>
             </select>
             <br> <br>
-            <input type="submit" value="Get Series">
+            <input type="submit" value="Get Series" >
           </form>
         </span>
       </article>

@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+
 import javax.ejb.Remote;
 
 import jpaprimer.generated.Serie;
@@ -19,4 +21,5 @@ public interface IManageSeries {
 	public List<String> atLeastOneKeyword(List<String> keyword);				// Retrives the series that contains at least one of the keywords in their description
 	public List<String> allKeywords(List<String> keyword);						// Retrives the series that contains all the keywords in their description
 	public Map<String, BigDecimal> genresRating();
+	public Set<Serie> genreSeries(String genre);
 }

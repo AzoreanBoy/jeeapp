@@ -7,16 +7,17 @@ import java.util.List;
 import javax.jws.WebService;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
-import jpaprimer.generated.Serie;
+import jpaprimer.generated.*;
 
 @WebService
 public class SeriesSoapWS {
 
 	@PersistenceContext(unitName = "playSeriesShow")
 	private EntityManager em;
+
+
 
 	/**
 	 * Gets All the Series in the Database and returns a list of Series
@@ -77,4 +78,6 @@ public class SeriesSoapWS {
 		}
 		return rating;
 	}
+
+  
 }

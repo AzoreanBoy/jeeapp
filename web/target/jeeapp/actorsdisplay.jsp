@@ -21,9 +21,9 @@
     </header>
     <div class="menu">
       <span>
-        <a href="http://localhost:8080/web/"><strong>Home</strong></a>
-        <a href="http://localhost:8080/web/actors"><strong>Actors</strong></a>
+        <a href="http://localhost:8080/web/homepage"><strong>Home</strong></a>
         <a href="http://localhost:8080/web/series"><strong>Series</strong></a>
+        <a href="http://localhost:8080/web/actors"><strong>Actors</strong></a>
       </span>
     </div>
     <h1 class="pagetitle">Actors in the Database...</h1>
@@ -41,7 +41,7 @@
   </main>
 
   <footer>
-    <p>Systems Integration - Project 1</p>
+    <p>Projeto 2 - WebServices</p>
     <p>Mariana Montenegro - 2019245964</p>
     <p>Pedro Ferreira - 2019170165</p>
   </footer>

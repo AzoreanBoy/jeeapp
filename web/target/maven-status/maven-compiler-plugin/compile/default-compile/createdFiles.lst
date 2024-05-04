@@ -1,5 +1,5 @@
 servlets\ActorsServlet.class
-filter\SecurityFilter.class
+servlets\homepage.class
 servlets\MainServlet.class
 servlets\GreetingServlet.class
-servlets\MyServlet.class
+servlets\SeriesServlet.class

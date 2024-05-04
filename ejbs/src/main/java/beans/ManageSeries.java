@@ -5,9 +5,13 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.stream.Collectors;
+
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -52,7 +56,7 @@ public class ManageSeries implements IManageSeries {
 	 */
 	public List<String> getAllActors() {
 		System.out.println("Retrieving the actors from the database...");
-		TypedQuery<Serie> q = em.createQuery("FROM Serie s", Serie.class);
+		TypedQuery<Serie> q = em.createQuery("select s FROM Serie s", Serie.class);
 		List<Serie> list = q.getResultList();
 		List<String> actors = new ArrayList<>();
 		for (Serie s : list) {
@@ -122,6 +126,7 @@ public class ManageSeries implements IManageSeries {
 		for (Serie serie : series) { // Os atores têm de ser ordenados
 			if (serie.getGenre().contains(genre)) {
 				for (String actor : serie.getStar()) {
+					System.out.println("star" + actor);
 					if (actorsNumbers.containsKey(actor)) {
 						Integer numberOfTimes = actorsNumbers.get(actor);
 						actorsNumbers.replace(actor, numberOfTimes, numberOfTimes + 1);
@@ -130,6 +135,7 @@ public class ManageSeries implements IManageSeries {
 					}
 				}
 				for (String actor : serie.getActor()) {
+					System.out.println("actor" + actor);
 					if (actorsNumbers.containsKey(actor)) {
 						Integer numberOfTimes = actorsNumbers.get(actor);
 						actorsNumbers.replace(actor, numberOfTimes, numberOfTimes + 1);
@@ -194,12 +200,37 @@ public class ManageSeries implements IManageSeries {
 								+ "where sg.serie_id = s.id " + "group by sg.genre " + "FETCH NEXT 30 ROWS ONLY")
 				.getResultList();
 		Map<String, BigDecimal> avgRatingByGenre = new HashMap<>();
+		int i = 1;
 		for (Object[] o : results) {
 			String g = (String) o[0];
-			BigDecimal avg = (BigDecimal) o[1];
+			BigDecimal avg = (BigDecimal) o[i];
+			System.out.println(g + "_" + avg);
 			avgRatingByGenre.put(g, avg);
+
 		}
 
 		return avgRatingByGenre;
+	}
+
+	public Set<Serie> genreSeries(String genre) {
+		System.out.println(capitalise(genre));
+		System.out.println("Getting Things Done");
+		TypedQuery<Serie> q = em.createQuery("FROM Serie s", Serie.class);
+		Set<Serie> list = (Set<Serie>) q.getResultList().stream().collect(Collectors.toSet());
+		Set<Serie> series = new HashSet<>();
+		for (Serie s : list) {
+			System.out.println("From List ---- " + s.getTitle());
+			System.out.println(s.getGenre());
+			if (s.getGenre().contains(capitalise(genre))) {
+				series.add(s);
+				System.out.println("Adicionou - " + s.getTitle());
+			}
+		}
+		return series;
+	}
+
+	// Auxiliares
+	private static String capitalise(String str) {
+		return str.substring(0, 1).toUpperCase() + str.substring(1).toLowerCase();
 	}
 }
